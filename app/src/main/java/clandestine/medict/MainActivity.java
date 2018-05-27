@@ -60,25 +60,64 @@ public class MainActivity extends AppCompatActivity {
 
         Retrofit retrofit = builder.build();
 
+        String type_ob="QuestionSet";
 
         QuestionClient questionClient = retrofit.create(QuestionClient.class);
-        Call<List<Questions>> call =questionClient.cqAll();
-        System.out.println("duru"+call.request());
+        Call<List<Questions>> call_cq =questionClient.cqAll();
+
+        Call<List<QuestionSet>> call_qset =questionClient.q_set();
+
+        Call<List<ExamHistory>> call_ehistory =questionClient.e_history();
 
 
-        Toast.makeText(MainActivity.this, call.toString(), Toast.LENGTH_SHORT).show();
+//        call_ehistory.enqueue(new Callback<List<ExamHistory>>() {
+//            @Override
+//            public void onResponse(Call<List<ExamHistory>> call, Response<List<ExamHistory>> response) {
+//                System.out.println("hcud");
+//                List<ExamHistory> repos = response.body();
+//
+//                listView.setAdapter(new ExamHistoryAdapter(MainActivity.this, repos));
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<ExamHistory>> call, Throwable t) {
+//                Toast.makeText(MainActivity.this, "error :(", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
 
-        call.enqueue(new Callback<List<Questions>>() {
+
+//        call_cq.enqueue(new Callback<List<Questions>>() {
+//            @Override
+//            public void onResponse(Call<List<Questions>> call, Response<List<Questions>> response) {
+//                System.out.println("hcud");
+//                List<Questions> repos = response.body();
+//
+//                listView.setAdapter(new QuestionAdapter(MainActivity.this, repos));
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<Questions>> call, Throwable t) {
+//                Toast.makeText(MainActivity.this, "error :(", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+
+
+
+
+
+        call_qset.enqueue(new Callback<List<QuestionSet>>() {
             @Override
-            public void onResponse(Call<List<Questions>> call, Response<List<Questions>> response) {
+            public void onResponse(Call<List<QuestionSet>> call, Response<List<QuestionSet>> response) {
                 System.out.println("hcud");
-                List<Questions> repos = response.body();
+                List<QuestionSet> repos = response.body();
 
-                listView.setAdapter(new QuestionAdapter(MainActivity.this, repos));
+                listView.setAdapter(new QuestionSetAdapter(MainActivity.this, repos));
             }
 
             @Override
-            public void onFailure(Call<List<Questions>> call, Throwable t) {
+            public void onFailure(Call<List<QuestionSet>> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "error :(", Toast.LENGTH_SHORT).show();
             }
         });

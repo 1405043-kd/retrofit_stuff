@@ -15,14 +15,12 @@ import java.util.List;
  * Created by norman on 12/26/16.
  */
 
-
-
-public class GitHubRepoAdapter extends ArrayAdapter<GitHubRepo> {
+public class QuestionSetAdapter extends ArrayAdapter<QuestionSet> {
 
     private Context context;
-    private List<GitHubRepo> values;
+    private List<QuestionSet> values;
 
-    public GitHubRepoAdapter(Context context, List<GitHubRepo> values) {
+    public QuestionSetAdapter(Context context, List<QuestionSet> values) {
         super(context, R.layout.list_item_pagination, values);
 
         this.context = context;
@@ -41,8 +39,8 @@ public class GitHubRepoAdapter extends ArrayAdapter<GitHubRepo> {
 
         TextView textView = (TextView) row.findViewById(R.id.list_item_pagination_text);
 
-        GitHubRepo item = values.get(position);
-        String message = item.getName();
+        QuestionSet item = values.get(position);
+        String message = item.getQuestionName();
         textView.setText(message);
 
         return row;
