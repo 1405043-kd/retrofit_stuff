@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "464155712504",
+    "firebase_url": "https://medimission-49126.firebaseio.com",
+    "project_id": "medimission-49126",
+    "storage_bucket": "medimission-49126.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464155712504:android:7d55502f8d0578bc",
+        "android_client_info": {
+          "package_name": "clandestine.medict"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464155712504-g9tjnereu4pumnvvintkjbu93dvtjge0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "clandestine.medict",
+            "certificate_hash": "5fffff0611873cac8daef97528950f1ff76d05fe"
+          }
+        },
+        {
+          "client_id": "464155712504-rhb1vie9i1nsu4eknuvmbn8s08esdl2a.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "464155712504-rhb1vie9i1nsu4eknuvmbn8s08esdl2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDE9OUsuIbRGhugDpjMX098o629H3Msg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464155712504-rhb1vie9i1nsu4eknuvmbn8s08esdl2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464155712504:android:6fd3e57542171b09",
+        "android_client_info": {
+          "package_name": "clandestine.meditest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464155712504-p3i4ch2qremshnk7h15fjk054libvpsq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "clandestine.meditest",
+            "certificate_hash": "5fffff0611873cac8daef97528950f1ff76d05fe"
+          }
+        },
+        {
+          "client_id": "464155712504-rhb1vie9i1nsu4eknuvmbn8s08esdl2a.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "464155712504-rhb1vie9i1nsu4eknuvmbn8s08esdl2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDE9OUsuIbRGhugDpjMX098o629H3Msg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464155712504-rhb1vie9i1nsu4eknuvmbn8s08esdl2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464155712504:android:5e42fb3e311dee3d",
+        "android_client_info": {
+          "package_name": "ss.medimission"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464155712504-5442fq9o7nqapnumj2hpbmefbcub44mv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ss.medimission",
+            "certificate_hash": "8ead4141c800353a02ede8fb30f613fd2e3b9438"
+          }
+        },
+        {
+          "client_id": "464155712504-rhb1vie9i1nsu4eknuvmbn8s08esdl2a.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "464155712504-rhb1vie9i1nsu4eknuvmbn8s08esdl2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDE9OUsuIbRGhugDpjMX098o629H3Msg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464155712504-rhb1vie9i1nsu4eknuvmbn8s08esdl2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
