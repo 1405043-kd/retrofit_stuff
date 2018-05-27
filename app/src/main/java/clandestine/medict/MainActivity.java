@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         QuestionClient questionClient = retrofit.create(QuestionClient.class);
-        Call<List<Questions>> call =questionClient.questionsForSub("Chemistry");
+        Call<List<Questions>> call =questionClient.cqAll();
         System.out.println("duru"+call.request());
 
 
