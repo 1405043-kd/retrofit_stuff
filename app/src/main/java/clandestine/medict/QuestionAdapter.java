@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -41,6 +42,11 @@ public class QuestionAdapter extends ArrayAdapter<Questions> {
 
         Questions item = values.get(position);
         String message = item.getQuestion();
+        Button button =(Button) row.findViewById(R.id.childButton);
+        button.setText(message);
+        button.setFocusable(false);
+        button.setClickable(false);
+
         textView.setText(message);
 
         return row;

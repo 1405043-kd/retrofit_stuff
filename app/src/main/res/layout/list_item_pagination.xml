@@ -7,8 +7,15 @@
     <TextView
         android:id="@+id/list_item_pagination_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="@+id/label"
         android:textSize="20sp"></TextView>
+
+    <Button
+        android:id="@+id/childButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Click Me" />
 
 </android.support.constraint.ConstraintLayout>

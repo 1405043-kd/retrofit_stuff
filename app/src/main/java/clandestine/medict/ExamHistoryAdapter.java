@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -39,8 +40,11 @@ public class ExamHistoryAdapter extends ArrayAdapter<ExamHistory> {
 
         TextView textView = (TextView) row.findViewById(R.id.list_item_pagination_text);
 
+
+
         ExamHistory item = values.get(position);
         String message = item.getQuestionId();
+
         textView.setText(message);
 
         return row;

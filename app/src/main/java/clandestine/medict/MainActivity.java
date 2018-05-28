@@ -4,6 +4,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl("http://192.168.0.104:8000/")
+            //    .baseUrl("https://api.github.com/")
                 .addConverterFactory(GsonConverterFactory.create());
 
         Retrofit retrofit = builder.build();
@@ -63,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
         String type_ob="QuestionSet";
 
         QuestionClient questionClient = retrofit.create(QuestionClient.class);
+
+
+
         Call<List<Questions>> call_cq =questionClient.cqAll();
 
         Call<List<QuestionSet>> call_qset =questionClient.q_set();
@@ -87,44 +93,54 @@ public class MainActivity extends AppCompatActivity {
 //
 
 
-//        call_cq.enqueue(new Callback<List<Questions>>() {
-//            @Override
-//            public void onResponse(Call<List<Questions>> call, Response<List<Questions>> response) {
-//                System.out.println("hcud");
-//                List<Questions> repos = response.body();
-//
-//                listView.setAdapter(new QuestionAdapter(MainActivity.this, repos));
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<Questions>> call, Throwable t) {
-//                Toast.makeText(MainActivity.this, "error :(", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-
-
-
-
-
-        call_qset.enqueue(new Callback<List<QuestionSet>>() {
+        call_cq.enqueue(new Callback<List<Questions>>() {
             @Override
-            public void onResponse(Call<List<QuestionSet>> call, Response<List<QuestionSet>> response) {
+            public void onResponse(Call<List<Questions>> call, Response<List<Questions>> response) {
                 System.out.println("hcud");
-                List<QuestionSet> repos = response.body();
+                List<Questions> repos = response.body();
 
-                listView.setAdapter(new QuestionSetAdapter(MainActivity.this, repos));
+                listView.setAdapter(new QuestionAdapter(MainActivity.this, repos));
+                listView.setOnItemClickListener(new ListView.OnItemClickListener(){
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        Questions questions=(Questions) adapterView.getItemAtPosition(i);
+
+                        Toast.makeText(MainActivity.this, questions.getQuestion(), Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
             }
 
             @Override
-            public void onFailure(Call<List<QuestionSet>> call, Throwable t) {
+            public void onFailure(Call<List<Questions>> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "error :(", Toast.LENGTH_SHORT).show();
             }
         });
 
 
+
+
+
+
+//        call_qset.enqueue(new Callback<List<QuestionSet>>() {
+//            @Override
+//            public void onResponse(Call<List<QuestionSet>> call, Response<List<QuestionSet>> response) {
+//                System.out.println("hcud");
+//                List<QuestionSet> repos = response.body();
+//
+//                listView.setAdapter(new QuestionSetAdapter(MainActivity.this, repos));
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<QuestionSet>> call, Throwable t) {
+//                Toast.makeText(MainActivity.this, "error :(", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
+
 //          GitHubClient client = retrofit.create(GitHubClient.class);
-//          Call<List<GitHubRepo>> call = client.reposForUser("1405043-kd");
+//          Call<List<GitHubRepo>> call = client.reposForUser("SamsadSajid");
 //
 //          System.out.println("lulul"+call.clone());
 //
